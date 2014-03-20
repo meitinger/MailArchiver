@@ -96,14 +96,14 @@ When archiving a mail, the program extracts the sender, date, subject and body
 message and the associated user's SID in a table called `Messages`, which must
 have the following columns:
 
-	ID varchar(250) NOT NULL
-	Mailbox nvarchar(max) NOT NULL
-	Owner varbinary(85) NOT NULL
-	Date datetime NULL
-	Sender nvarchar(max) NULL
-	Subject nvarchar(max) NULL
-	Body nvarchar(max) NULL
-	Data varbinary(max) NOT NULL
+    ID varchar(250) NOT NULL
+    Mailbox nvarchar(max) NOT NULL
+    Owner varbinary(85) NOT NULL
+    Date datetime NULL
+    Sender nvarchar(max) NULL
+    Subject nvarchar(max) NULL
+    Body nvarchar(max) NULL
+    Data varbinary(max) NOT NULL
 
 `Mailbox` contains the folder path to the message, the combination of `ID` and
 `Owner` is unique and should be (at least) indexed.
