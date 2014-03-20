@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Aufbauwerk.Tools.MailArchiver.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Database" Type="(Connection string)" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Host" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Port" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">143</Value>
+    </Setting>
+    <Setting Name="Security" Type="Aufbauwerk.Tools.MailArchiver.Configuration.SecurityLevel" Scope="Application">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="Accounts" Type="Aufbauwerk.Tools.MailArchiver.Configuration.Account[]" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Identity" Type="Aufbauwerk.Tools.MailArchiver.Configuration.IdentityType" Scope="Application">
+      <Value Profile="(Default)">EmailAddress</Value>
+    </Setting>
+    <Setting Name="Filter" Type="Aufbauwerk.Tools.MailArchiver.Configuration.Filter" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
