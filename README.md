@@ -6,7 +6,7 @@ Description
 -----------
 This utility archives (i.e. moves) mails from an IMAP server to a SQL database.
 It allows for very fine-grained filtering and handling of multiple configurable
-IMAP accounts that are being mapped to domain users by mail address.
+IMAP accounts that are being mapped to domain users by their mail address.
 
 
 Requirements
@@ -27,23 +27,23 @@ file `MailArchive.exe.config`.
 - *Port*: The IMAP server's port, defaults to `143`.
 - *Security*: The security level to be used, either `None`, `Ssl` or `Tls`.
 - *Identity*: Describes what part of the mail adress should be used for
-              authentication
-              - `LocalPart`: Everything before the `@`.
-              - `EmailAddress` (default): The whole mail address.
-              - `SamAccountName`: The domain user's account name associated with
-                                  the given mail address.
-              - `UserPrincipalName`: The UPN of the associated domain account.
+  authentication:
+  - `LocalPart`: Everything before the `@`.
+  - `EmailAddress` (default): The whole mail address.
+  - `SamAccountName`: The domain user's account name associated with the given
+    mail address.
+  - `UserPrincipalName`: The UPN of the associated domain account.
 - Filter: Describes what messages should be archived. See the section about
-          [filtering](#Filters) below.
+  [filtering](#Filters) below.
 
 ### Accounts
-To configure the accounts run the program with the command line
+To manage accounts run the program with the command line:
 
     MailArchiver.exe /passwords
 
 This will bring up a dialog with a list containing one column for addresses and
-another one for passwords. The passwords are saved as a per-user setting and
-are encrypted using [Windows Data Protection](http://msdn.microsoft.com/en-us/library/ms995355.aspx).
+another for passwords. The passwords are saved per-user and encrypted using
+[Windows Data Protection](http://msdn.microsoft.com/en-us/library/ms995355.aspx).
 
 ### Filters
 Basically, all search terms supported by Java Mail can be used, including but
@@ -92,7 +92,7 @@ look at `Configuration.cs` to see what they are and what their syntax is.
 Database Schema
 ---------------
 When archiving a mail, the program extracts the sender, date, subject and body
-(preferably plain-text, otherwise html) and stores them together with the raw
+(preferably plain-text, otherwise HTML) and stores them together with the raw
 message and the associated user's SID in a table called `Messages`, which must
 have the following columns:
 
